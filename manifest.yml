@@ -1,0 +1,8 @@
+---
+applications:
+  - name: polr
+    buildpack: https://github.com/cloudfoundry/php-buildpack.git
+    memory: 1G
+    disk_quota: 1G
+    services:
+    - polr-db
