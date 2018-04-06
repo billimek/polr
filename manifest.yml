@@ -2,7 +2,26 @@
 applications:
   - name: polr
     buildpack: https://github.com/cloudfoundry/php-buildpack.git
-    memory: 1G
-    disk_quota: 1G
+    memory: 64m
+    disk_quota: 500m
+    #comamnd: ./set_env.sh
     services:
     - polr-db
+    env:
+      APP_ENV: production
+      APP_DEBUG: true
+      APP_KEY: "1Wp5clpm4p4CJlhZaExbMQg81QTcHzUk"
+      APP_NAME: "polr"
+      APP_PROTOCOL: "https://"
+      APP_ADDRESS: "polr.apps-np.homedepot.com"
+      POLR_GENERATED_AT: "April 5, 2018"
+      POLR_SETUP_RAN: true
+      DB_CONNECTION: mysql
+      SETTING_PUBLIC_INTERFACE: true
+      POLR_ALLOW_ACCT_CREATION: true
+      SETTING_PSEUDORANDOM_ENDING: true
+      APP_LOCALE: en
+      APP_FALLBACK_LOCALE: en
+      CACHE_DRIVER: file
+      SESSION_DRIVER: file
+      QUEUE_DRIVER: database

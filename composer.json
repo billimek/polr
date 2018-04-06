@@ -39,6 +39,6 @@
         "preferred-install": "dist"
     },
     "scripts": {
-      "post-install-cmd": "php artisan migrate --force"
+      "post-install-cmd": "./set_env.sh && php artisan migrate --force"
     }
 }
