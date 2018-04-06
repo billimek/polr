@@ -4,7 +4,6 @@ applications:
     buildpack: https://github.com/cloudfoundry/php-buildpack.git
     memory: 64m
     disk_quota: 500m
-    #comamnd: ./set_env.sh
     services:
     - polr-db
     env:
@@ -19,9 +18,14 @@ applications:
       DB_CONNECTION: mysql
       SETTING_PUBLIC_INTERFACE: true
       POLR_ALLOW_ACCT_CREATION: true
+      SETTING_SHORTEN_PERMISSION: false
       SETTING_PSEUDORANDOM_ENDING: true
       APP_LOCALE: en
       APP_FALLBACK_LOCALE: en
       CACHE_DRIVER: file
       SESSION_DRIVER: file
       QUEUE_DRIVER: database
+      POLR_BASE: 32
+      _API_KEY_LENGTH: 15
+      _ANALYTICS_MAX_DAYS_DIFF: 365
+      _PSEUDO_RANDOM_KEY_LENGTH: 5
