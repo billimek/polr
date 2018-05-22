@@ -1,7 +1,7 @@
 {
   "WEBDIR": "public",
   "PHP_VERSION": "{PHP_70_LATEST}",
-  "PHP_EXTENSIONS": ["bz2", "zlib", "curl", "mcrypt", "openssl", "mysql", "pdo", "pdo_mysql", "mbstring", "tokenizer", "json"],
+  "PHP_EXTENSIONS": ["bz2", "zlib", "curl", "mcrypt", "openssl", "mysqli", "pdo", "pdo_mysql", "mbstring", "tokenizer", "json"],
   "COMPOSER_VENDOR_DIR": "vendor",
   "COMPOSER_INSTALL_OPTIONS": ["--no-interaction", "--no-dev", "--no-progress", "-o"]
 }
